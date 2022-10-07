@@ -14,9 +14,9 @@ class Base:
         __nb_objects (int): The number of instantiated Bases.
     """
 
-     __nb_objects = 0
+    __nb_objects = 0
 
-     def __init__(self, id=None):
+    def __init__(self, id=None):
         """Initialize a new Base.
 
         Args:
@@ -28,8 +28,8 @@ class Base:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
 
- @staticmethod
- def to_json_string(list_dictionaries):
+@staticmethod
+def to_json_string(list_dictionaries):
     """Return the JSON serialization of a list of dicts.
 
     Args:
@@ -83,8 +83,8 @@ def create(cls, **dictionary):
         new.update(**dictionary)
         return new
 
- @classmethod
- def load_from_file(cls):
+@classmethod
+def load_from_file(cls):
     """Return a list of classes instantiated from a file of JSON strings.
 
     Reads from `<cls.__name__>.json`.
@@ -145,8 +145,8 @@ def load_from_file_csv(cls):
         except IOError:
             return []
 
- @staticmethod
- def draw(list_rectangles, list_squares):
+@staticmethod
+def draw(list_rectangles, list_squares):
     """Draw Rectangles and Squares using the turtle module.
 
     Args:
